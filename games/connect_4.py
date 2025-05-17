@@ -60,14 +60,17 @@ def apply_move(board_state, move_x, side):
 
 
 def available_moves(board_state):
-    """Get all legal moves for the current board_state. For Tic-tac-toe that is all positions that do not currently have
-    pieces played.
+    """Return all valid moves for the given ``board_state``.
+
+    In Connect-4 a move consists of dropping a piece into one of the columns
+    on the board.  A column is a legal move if it contains at least one empty
+    space so that a piece can be dropped into it.
 
     Args:
         board_state: The board_state we want to check for valid moves.
 
     Returns:
-        Generator of int: All the valid moves that can be played in this position.
+        Generator of int: Column indices where a piece may be dropped.
     """
     for x in range(len(board_state)):
         if any(y == 0 for y in board_state[x]):
