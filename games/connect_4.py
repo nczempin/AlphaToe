@@ -62,7 +62,7 @@ def apply_move(board_state, move_x, side):
 def available_moves(board_state):
     """Return all valid moves for the given ``board_state``.
 
-    In Connect-4 a move consists of dropping a piece into one of the columns
+    In Connect-4, a move consists of dropping a piece into one of the columns
     on the board.  A column is a legal move if it contains at least one empty
     space so that a piece can be dropped into it.
 
