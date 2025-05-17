@@ -26,4 +26,5 @@ class TestConnect4(TestCase):
         self.assertEqual(1, has_winner(board_state, 4))
 
     def test_play_game(self):
-        play_game(random_player, random_player)
+        result = play_game(random_player, random_player)
+        self.assertIn(result, (-1, 0, 1))
