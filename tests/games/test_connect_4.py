@@ -13,7 +13,7 @@ class TestTicTacToeX(TestCase):
                        (0, 0, 1, 0, 0, 0),
                        (0, 0, 0, 1, 0, 0))
 
-        self.assertEqual(1, has_winner(board_state), 4)
+        self.assertEqual(1, has_winner(board_state, 4))
 
         board_state = ((0, 0, 0, 0, 1, 0),
                        (0, 0, 0, 1, 0, 0),
@@ -23,7 +23,7 @@ class TestTicTacToeX(TestCase):
                        (0, 0, 0, 0, 0, 0),
                        (0, 0, 0, 0, 0, 0))
 
-        self.assertEqual(1, has_winner(board_state), 4)
+        self.assertEqual(1, has_winner(board_state, 4))
 
     def test_play_game(self):
         play_game(random_player, random_player)
