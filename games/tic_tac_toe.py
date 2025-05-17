@@ -17,7 +17,7 @@ from techniques.min_max import evaluate
 
 
 def _new_board():
-    """Return a emprty tic-tac-toe board we can use for simulating a game.
+    """Return an empty tic‑tac‑toe board we can use for simulating a game.
 
     Returns:
         3x3 tuple of ints
