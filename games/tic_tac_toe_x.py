@@ -235,7 +235,8 @@ def play_game(plus_player_func, minus_player_func, board_size=5, winning_length=
             return -player_turn
 
         board_state = apply_move(board_state, move, player_turn)
-        print(board_state)
+        if log:
+            print(board_state)
 
         winner = has_winner(board_state, winning_length)
         if winner != 0:
