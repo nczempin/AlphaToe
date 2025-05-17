@@ -93,11 +93,16 @@ def monte_carlo_tree_search_uct(game_spec, board_state, side, number_of_samples)
                 result = 0
                 break
 
-            if all((state in state_samples) for _, state in move_states):
+            if all((state in state_samples) for state in move_states.values()):
                 log_total_samples = math.log(sum(state_samples[s] for s in move_states.values()))
-                move, state = max(move_states, key=lambda _, s: _upper_confidence_bounds(state_results[s],
-                                                                                         state_samples[s],
-                                                                                         log_total_samples))
+                move, state = max(
+                    move_states.items(),
+                    key=lambda item: _upper_confidence_bounds(
+                        state_results[item[1]],
+                        state_samples[item[1]],
+                        log_total_samples,
+                    ),
+                )
             else:
                 move = random.choice(list(move_states.keys()))
 
