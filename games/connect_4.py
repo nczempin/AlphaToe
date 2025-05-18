@@ -16,7 +16,7 @@ from games.tic_tac_toe_x import evaluate
 
 
 def _new_board(board_width, board_height):
-    """Return a emprty tic-tac-toe board we can use for simulating a game.
+    """Return an **empty** tic-tac-toe board we can use for simulating a game.
 
     Args:
         board_width (int): The width of the board, a board_width * board_height board is created

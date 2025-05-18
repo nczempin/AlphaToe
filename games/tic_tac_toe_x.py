@@ -20,7 +20,7 @@ from common.base_game_spec import BaseGameSpec
 
 
 def _new_board(board_size):
-    """Return a emprty tic-tac-toe board we can use for simulating a game.
+    """Return an **empty** tic-tac-toe board we can use for simulating a game.
 
     Args:
         board_size (int): The size of one side of the board, a board_size * board_size board is created
